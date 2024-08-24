@@ -3,7 +3,6 @@ import 'package:quiz_2/core/utils/color_manager.dart';
 import 'package:quiz_2/core/utils/dimension_manager.dart';
 import 'package:quiz_2/core/utils/values_manager.dart';
 
-//Todo remove this widget to each screen
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,

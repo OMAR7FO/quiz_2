@@ -1,5 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:quiz_2/screens/add_card_screen/add_card_screen.dart';
+import 'package:quiz_2/screens/auth/presentation/screens/login_screen.dart';
+import 'package:quiz_2/screens/auth/presentation/screens/sign_up_screen.dart';
 import 'package:quiz_2/screens/categories_screen/categories_screen.dart';
 import 'package:quiz_2/screens/checkout_screen/checkout_screen.dart';
 import 'package:quiz_2/screens/home_screen/home_screen.dart';
@@ -22,10 +24,20 @@ abstract class AppRouter {
   static const kCheckout = '/checkout';
   static const kAddCard = '/add_card';
   static const kTest = '/test';
+  static const kLogin = '/login';
+  static const kSignUp = '/sign_up';
   static final router = GoRouter(routes: [
     GoRoute(
-      path: '/',
+      path: '/on_boarding',
       builder: (context, state) => const OnBoardingScreen(),
+    ),
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: kSignUp,
+      builder: (context, state) => const SignUpScreen(),
     ),
     GoRoute(
       path: kHomeScreen,
